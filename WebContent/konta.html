@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="css/multi-select.css" media="screen" type="text/css">
+    <link rel="stylesheet" href="css/main.css" type="text/css" />
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <nav>
+        <img src="img/logo_w.png" alt="Politechnika Rzeszowska" />
+        <p class="welcome">Witaj, Admin</p>
+        <ul>
+            <li><i class="fa fa-chevron-right"></i>Publikacje</li>
+            <li><i class="fa fa-chevron-right"></i>Akceptacja publikacji</li>
+            <li><i class="fa fa-chevron-right"></i>Konta użytkowników</li>
+            <li><i class="fa fa-chevron-right"></i>Wyloguj</li>
+        </ul>
+    </nav>
+    <header>
+        <div class="search">Wyszukiwanie zaawansowane</div>
+        <input type="text" class="input" name="search" placeholder="Szukaj..." />
+        <input type="hidden" name="action" value="search" />
+        <button class="zoom" type="submit"><i class="fa fa-search"></i></button>
+    </header>
+    <section class="main">
+        <h1>Konta użytkowników</h1>
+        <div class="typy">
+            <h3>Zarejestrowani użytkownicy:</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Lp.</th>
+                        <th>Autor</th>
+                        <th>Liczna publikacji</th>
+                        <th>Data ostatniej publ.</th>
+                        <th style="width:160px;">Operacje</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1.
+                        </td>
+                        <td>Adam Kowalski
+                        </td>
+                        <td>2
+                        </td>
+                        <td>21-12-2014
+                        </td>
+                        <td>
+                            <button class="green">Przypomnienie&nbsp;<i class="fa fa-chevron-right"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>1.
+                        </td>
+                        <td>Adam Kowalski
+                        </td>
+                        <td>2
+                        </td>
+                        <td>21-12-2014
+                        </td>
+                        <td>
+                            <button class="green">Przypomnienie&nbsp;<i class="fa fa-chevron-right"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>1.
+                        </td>
+                        <td>Adam Kowalski
+                        </td>
+                        <td>2
+                        </td>
+                        <td>21-12-2014
+                        </td>
+                        <td>
+                            <button class="green">Przypomnienie&nbsp;<i class="fa fa-chevron-right"></i></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.multi-select.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>

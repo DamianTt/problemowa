@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" href="css/multi-select.css" media="screen"
+		type="text/css" />
+	<link rel="stylesheet" href="css/main.css" type="text/css" />
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans'
+		rel='stylesheet' type='text/css' />
+	<link rel="stylesheet"
+		href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+</h:head>
+
+<h:body>
+	<nav>
+		<img src="img/logo_w.png" alt="Politechnika Rzeszowska" />
+		<p class="welcome">Witaj, Admin</p>
+	</nav>
+	<header>
+		<div class="search">Wyszukiwanie zaawansowane</div>
+		<input type="text" class="input" name="search" placeholder="Szukaj..." />
+		<input type="hidden" name="action" value="search" />
+		<button class="zoom" type="submit">
+			<i class="fa fa-search"></i>
+		</button>
+	</header>
+	<section class="main">
+		<h1>Rejestracja</h1>
+		<h:form styleClass="logowanie" id="form">
+			<h:outputText value="E-mail: " />
+			<p:inputText id="email" value="#{user.email}" required="true"
+				requiredMessage="Wprowadź E-mail" />
+			<p:message for="email" />
+			
+			<h:outputText value="Hasło: " />
+			<p:password id="password" value="#{user.password}" required="true"
+				requiredMessage="Wprowadź Hasło" />
+			<p:message for="password" />
+			
+			<h:outputText value="Imię: " />
+			<p:inputText id="firstName" value="#{user.firstName}" required="true"
+				requiredMessage="Wprowadź Imię" />
+			<p:message for="firstName" />
+
+			<h:outputText value="Nazwisko: " />
+			<p:inputText id="lastName" value="#{user.lastName}" required="true"
+				requiredMessage="Wprowadź Nazwisko" />
+			<p:message for="lastName" />
+
+			<h:outputText value="Numer telefonu: " />
+			<p:inputText id="phone" value="#{user.phone}" />
+			<p:message for="phone" />
+
+			<br />
+			<br />
+			<div class="row">
+				<div class="left">
+					<p>* - pole obowiązkowe</p>
+				</div>
+				<div class="right">
+					<p:commandButton id="submit" value="Zarejestruj się" styleClass="green"
+						update="form" action="#{userService.addUser(user)}"
+						icon="ui-icon-check" />
+				</div>
+			</div>
+		</h:form>
+	</section>
+	<script type="text/javascript"
+		src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.multi-select.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</h:body>
+
+</html>

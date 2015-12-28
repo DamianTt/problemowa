@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Insert title here</title>
+</h:head>
+<h:body>
+	<h:form id="form">
+		<p:growl id="growl" sticky="true" />
+		<p:panel header="Zamieść publikację" style="margin-top: 5px">
+			<h:panelGrid id="panel" columns="3" style="margin-bottom:10px"
+				cellpadding="5">
+
+				<h:outputText value="Tytuł publikacji: " />
+				<p:inputText id="tytul" value="#{publikacja.tytul}" />
+				<p:message for="tytul" />
+
+				<h:outputLabel for="datetime" value="Datetime:" />
+				<p:calendar id="datetime" value="#{publikacja.dataWydania}"
+					pattern="MM/dd/yyyy HH:mm:ss" />
+				<p:message for="datetime" />
+
+				<h:outputText value="ISBN: " />
+				<p:inputText id="isbn" value="#{publikacja.ISBN}" />
+				<p:message for="isbn" />
+
+				<h:outputText value="Numer wydania: " />
+				<p:inputText id="nrWydania" value="#{publikacja.nrWydania}" />
+				<p:message for="nrWydania" />
+
+				<p:outputLabel value="Opis" for="description" />
+				<p:inputTextarea id="description" rows="5" cols="50"
+					value="#{publikacja.opis}" required="true"
+					requiredMessage="Wprowadź opis" />
+				<p:message for="description" />
+
+				<h:outputText value="Link do publikacji: " />
+				<p:inputText id="linkDoPublikacji"
+					value="#{publikacja.linkDoPublikacji}" />
+				<p:message for="linkDoPublikacji" />
+
+				<h:outputText value="Tytuł konferencji: " />
+				<p:inputText id="tytulKonferencji"
+					value="#{publikacja.tytulKonferencji}" />
+				<p:message for="tytulKonferencji" />
+
+				<h:outputText value="Tytuł prasy: " />
+				<p:inputText id="tytulPrasy" value="#{publikacja.tytulPrasy}" />
+				<p:message for="tytulPrasy" />
+
+				<p:commandButton id="submit" value="Publikuj" update="panel growl"
+					action="#{publikacjaService.addPublikacja(publikacja)}"
+					icon="ui-icon-check" />
+
+			</h:panelGrid>
+		</p:panel>
+	</h:form>
+
+	<p:dataTable var="publikacjatable"
+		value="#{publikacjaService.listPublikacja()}">
+
+		<p:column headerText="Id">
+			<h:outputText value="#{publikacja.idPublikacji}" />
+		</p:column>
+
+		<p:column headerText="Tytuł">
+			<h:outputText value="#{publikacja.tytul}" />
+		</p:column>
+
+		<p:column headerText="Data wydania">
+			<h:outputText value="#{publikacja.dataWydania}" />
+		</p:column>
+
+		<p:column headerText="ISBN">
+			<h:outputText value="#{publikacja.ISBN}" />
+		</p:column>
+
+		<p:column headerText="Numer wydania">
+			<h:outputText value="#{publikacja.nrWydania}" />
+		</p:column>
+
+		<p:column headerText="Opis">
+			<h:outputText value="#{publikacja.opis}" />
+		</p:column>
+
+		<p:column headerText="Link">
+			<h:outputText value="#{publikacja.linkDoPublikacji}" />
+		</p:column>
+
+		<p:column headerText="Tytuł konferencji">
+			<h:outputText value="#{publikacja.tytulKonferencji}" />
+		</p:column>
+
+		<p:column headerText="Tytuł prasy">
+			<h:outputText value="#{publikacja.tytulPrasy}" />
+		</p:column>
+	</p:dataTable>
+</h:body>
+</html>

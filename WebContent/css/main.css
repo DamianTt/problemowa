@@ -1,0 +1,410 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+nav {
+    background-color: #08985D;
+    width: 210px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    padding: 0 20px;
+    color: #fff;
+    z-index: 1;
+}
+
+nav img {
+    margin: 20px auto;
+    display: block;
+    width: 180px;
+}
+
+nav .welcome {
+    font-size: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 25px;
+}
+
+nav .welcome:after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    display: block;
+    background-color: #fff;
+}
+
+header {
+    background-color: #D9D9D9;
+    margin-left: 250px;
+    padding: 10px 30px 0 0;
+    color: #6E6E6E;
+    position: relative;
+    border-bottom: 1px solid #999;
+    width: calc(100% - 280px);
+    min-width: 410px;
+}
+
+header .search {
+    display: inline-block;
+    width: 180px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+header .input {
+    position: relative;
+    top: -12px;
+    height: 15px;
+    padding: 5px;
+    background-color: #eee;
+    border: 2px solid #9E9E9E;
+    color: #9E9E9E;
+    margin-left: 10px;
+}
+
+header .zoom {
+    position: relative;
+    top: -12px;
+    font-size: 20px;
+    background: none;
+    border: none;
+    color: #6E6E6E;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: all 0.1s linear;
+}
+
+header .zoom:hover {
+    font-size: 22px;
+    top: -11px;
+    margin-left: 9px;
+}
+
+.main {
+    margin-left: 250px;
+    padding-left: 30px;
+    color: #6E6E6E;
+    width: calc(100% - 280px);
+}
+
+.main h1 {
+    color: #6E6E6E;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #6E6E6E;
+    margin: 20px 10px 0 0;
+}
+
+.main .logowanie {
+    margin-left: 6%;
+    width: 60%;
+}
+
+.main input {
+    width: 100%;
+    height: 15px;
+    padding: 5px;
+    background-color: #eee;
+    border: 1px solid #9E9E9E;
+    color: #9E9E9E;
+}
+
+.main p {
+    margin-bottom: 5px;
+}
+
+.logowanie .left {
+    float: left;
+    width: 60%;
+}
+
+.logowanie .left p {
+    margin-top: 5px;
+}
+
+.main a {
+    text-decoration: none;
+}
+
+.logowanie .right {}
+
+.main .green {
+    background-color: #08985D;
+    color: #fff;
+    padding: 8px;
+    border: 1px solid #666;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.1s linear;
+}
+
+.green:hover {
+    background-color: #fff;
+    color: #08985D;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 10px;
+    font-size: 15px;
+}
+
+ul li {
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+ul li:hover,
+ul .active {
+    font-weight: bold;
+}
+
+ul li i {
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+.filtry {
+    margin: 0 10px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #333;
+}
+
+.filtry span {
+    display: inline-block;
+    width: 110px;
+}
+
+.filtry input {
+    display: inline-block;
+    width: 150px;
+    margin-right: 5px;
+}
+
+.filtry select {
+    padding: 5px;
+    background-color: #eee;
+    border: 1px solid #9E9E9E;
+    color: #9E9E9E;
+    height: 28px;
+    width: 162px;
+    margin-right: 5px;
+}
+
+.filtry .inline-row {
+    display: inline-block;
+    margin: 3px 0;
+}
+
+.filtry h3 {
+    margin: 0px 0px;
+}
+
+.green.filtr {
+    margin-right: 20px;
+    float: right;
+    position: inherit;
+}
+
+.item {
+    display: flex;
+    margin: 15px 20px 0 0;
+    float: left;
+}
+
+.item .small {
+    max-width: 70px;
+    max-height: 100px;
+}
+
+.item .opis {
+    margin: 0 10px;
+    width: 200px;
+}
+
+.item .opis p {
+    margin: 8px;
+}
+
+.item .buttons .green {
+    display: block;
+    margin: 5px 0;
+    width: 100%;
+    position: inherit;
+}
+
+.wyniki {
+    margin-left: 10px;
+}
+
+.ilosc {
+    padding-bottom: 10px;
+}
+
+.podglad {
+    padding-left: 10px;
+}
+
+.podglad .big {
+    height: 250px;
+    float: left;
+}
+
+.podglad .item {
+    display: inline-block;
+    margin: 15px 20px 0 0;
+    float: left;
+    width: 100%;
+}
+
+.podglad .item .opis {
+    float: left;
+    width: calc(100% - 210px);
+    padding: 0 0 0 15px;
+}
+
+.podglad h2 {
+    border-bottom: 1px solid #666;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.podglad p {
+    margin: 4px 0 !important;
+}
+
+.podglad h2 p {
+    max-width: 120px;
+}
+
+.podglad .green {
+    position: inherit;
+    left: auto;
+    margin: 5px 5px;
+    float: right;
+}
+
+.edycja {
+    padding-left: 10px;
+}
+
+.edycja .big {
+    height: 250px;
+    width: 180px;
+    float: left;
+}
+
+.edycja .green {
+    position: inherit;
+    left: auto;
+    margin: 5px 5px;
+    float: right;
+}
+
+.edycja .filtry {
+    border-bottom: none;
+    display: inline-block;
+    width: 70%;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.edycja .filtry input,
+.edycja .filtry select {
+    width: 100%;
+}
+
+.edycja .filtry span {
+    width: 150px;
+}
+
+.edycja .item {
+    display: inherit;
+    margin: 15px 20px 0 0;
+    float: left;
+    width: 100%;
+}
+
+.edycja .inline-row {
+    width: 100%;
+    display: inline-flex;
+    margin: 3px 0;
+    min-width: 200px;
+}
+
+.filtry.full-width {
+    width: calc(100% - 70px);
+}
+
+.typy table {
+    width: calc(100% - 20px);
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table td,
+table th {
+    border: 1px solid #666;
+    padding: 5px;
+    text-align: center;
+}
+
+table tr:first-child th {
+    border-top: 0;
+}
+
+table tr:last-child td {
+    border-bottom: 0;
+}
+
+table tr td:first-child,
+table tr th:first-child {
+    border-left: 0;
+}
+
+table tr td:last-child,
+table tr th:last-child {
+    border-right: 0;
+}
+
+.right-align {
+    float: right;
+    margin-right: 20px;
+}
+
+.edytuj-typ {
+    width: 410px;
+}
+
+.edytuj-typ input {
+    width: 360px;
+}
+
+.edytuj-typ .green {
+    margin-top: 10px;
+}
+
+.ms-container {
+    margin-top: 30px;
+}
+
+.ms-container .ms-selectable,
+.ms-container .ms-selection {
+    background: #eee;
+    border: 1px solid #9E9E9E;
+    color: #9E9E9E;
+}
+
+@media (max-width: 800px) {
+    header {
+        text-align: center;
+    }
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="css/multi-select.css" media="screen" type="text/css">
+    <link rel="stylesheet" href="css/main.css" type="text/css" />
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <nav>
+        <img src="img/logo_w.png" alt="Politechnika Rzeszowska" />
+        <p class="welcome">Witaj, użytkowniku</p>
+        <ul>
+            <li><i class="fa fa-chevron-right"></i>Zbiór publikacji</li>
+            <li><i class="fa fa-chevron-right"></i>Dodaj publikację</li>
+            <li><i class="fa fa-chevron-right"></i>Wyloguj</li>
+        </ul>
+    </nav>
+    <header>
+        <div class="search">Wyszukiwanie zaawansowane</div>
+        <input type="text" class="input" name="search" placeholder="Szukaj..." />
+        <input type="hidden" name="action" value="search" />
+        <button class="zoom" type="submit"><i class="fa fa-search"></i></button>
+    </header>
+    <section class="main">
+        <h1>Dodaj publikację</h1>
+        <div class="edycja">
+            <div class="item">
+                <form class="filtry full-width" action="" method="POST">
+                    <div class="inline-row">
+                        <span>Tytuł: </span>
+                        <input type="text" name="tytul" />
+                    </div>
+                    <div class="inline-row">
+                        <span>Data: </span>
+                        <input type="date" name="data" />
+                    </div>
+                    <div class="inline-row">
+                        <span>Opis: </span>
+                        <input type="text" name="opis" />
+                    </div>
+                    <div class="inline-row">
+                        <span>URL: </span>
+                        <input type="url" name="url" />
+                    </div>
+                    <div class="inline-row">
+                        <span>Typ publikacji: </span>
+                        <select name="typ">
+                            <option value="1">Monografia</option>
+                            <option value="2">Opcja 2</option>
+                            <option value="3">Opcja 3</option>
+                        </select>
+
+                    </div>
+                    <div class="inline-row">
+                        <span>Autor: </span>
+                        <input type="text" name="autor" />
+                    </div>
+                    <div class="inline-row">
+                        <span>ISBN: </span>
+                        <input type="text" name="isbn" />
+                    </div>
+                    <button class="green">Dodaj&nbsp;<i class="fa fa-chevron-right"></i></button>
+                    <button class="green">Zapisz&nbsp;<i class="fa fa-chevron-right"></i></button>
+                    <button class="green">Podgląd&nbsp;<i class="fa fa-chevron-right"></i></button>
+                </form>
+
+            </div>
+
+        </div>
+    </section>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.multi-select.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>

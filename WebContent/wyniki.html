@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="css/multi-select.css" media="screen" type="text/css">
+    <link rel="stylesheet" href="css/main.css" type="text/css" />
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <nav>
+        <img src="img/logo_w.png" alt="Politechnika Rzeszowska" />
+        <p class="welcome">Witaj, Admin</p>
+        <ul>
+            <li><i class="fa fa-chevron-right"></i>Zbiór publikacji</li>
+            <li><i class="fa fa-chevron-right"></i>Dodaj publikację</li>
+        </ul>
+    </nav>
+    <header>
+        <div class="search">Wyszukiwanie zaawansowane</div>
+        <input type="text" class="input" name="search" placeholder="Szukaj..." />
+        <input type="hidden" name="action" value="search" />
+        <button class="zoom" type="submit"><i class="fa fa-search"></i></button>
+    </header>
+    <section class="main">
+        <button class="filtr green" type="submit">Zastosuj filtry&nbsp;<i class="fa fa-chevron-right"></i></button>
+        <h1>Zbiór publikacji własnych "Moje publikacje"</h1>
+        <form class="filtry" action="" method="POST">
+            <h3>Filtruj wyświetlane</h3>
+            <div class="inline-row">
+                <span>Data od: </span>
+                <input type="date" name="dataod" />
+            </div>
+            <div class="inline-row">
+                <span>Data do: </span>
+                <input type="date" name="datado" />
+            </div>
+            <div class="inline-row">
+                <span>Typ publikacji: </span>
+                <select name="typ">
+                    <option value="1">Opcja 1</option>
+                    <option value="2">Opcja 2</option>
+                    <option value="3">Opcja 3</option>
+                </select>
+            </div>
+            <div class="inline-row">
+                <span>Tytuł: </span>
+                <input type="text" name="tytul" />
+            </div>
+            <div class="inline-row">
+                <!--<button class="green-filtr" type="submit">Zastosuj filtry&nbsp;<i class="fa fa-chevron-right"></i></button>-->
+            </div>
+        </form>
+        <div class="wyniki">
+            <div class="item">
+                <img class="small" src="img/podglad.jpg" />
+                <div class="opis">
+                    <p><strong>Tytuł</strong></p>
+                    <p>Typ publikacji</p>
+                    <p>Data publikacji</p>
+                </div>
+                <div class="buttons">
+                    <button class="green">Edytuj&nbsp;<i class="fa fa-chevron-right"></i></button>
+                    <button class="green">Podgląd&nbsp;<i class="fa fa-chevron-right"></i></button>
+                </div>
+            </div>
+            <div class="item">
+                <img class="small" src="img/podglad.jpg" />
+                <div class="opis">
+                    <p><strong>Tytuł</strong></p>
+                    <p>Typ publikacji</p>
+                    <p>Data publikacji</p>
+                </div>
+                <div class="buttons">
+                    <button class="green">Edytuj&nbsp;<i class="fa fa-chevron-right"></i></button>
+                    <button class="green">Podgląd&nbsp;<i class="fa fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.multi-select.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>
